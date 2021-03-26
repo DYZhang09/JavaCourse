@@ -1,12 +1,10 @@
 package hust.cs.javacourse.search.index.impl;
 
 import hust.cs.javacourse.search.index.AbstractPosting;
-import javafx.geometry.Pos;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.Comparator;
 import java.util.List;
 
 public class Posting extends AbstractPosting {
@@ -82,16 +80,21 @@ public class Posting extends AbstractPosting {
     @Override
     public void writeObject(ObjectOutputStream outputStream) {
         try {
-            outputStream.writeObject(this);
+            outputStream.writeObject(getDocId());
+            outputStream.writeObject(getFreq());
+            outputStream.writeObject(getPositions());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void readObject(ObjectInputStream inputStream) {
         try {
-            inputStream.readObject();
+            setDocId(inputStream.readInt());
+            setFreq(inputStream.readInt());
+            setPositions((List<Integer>)inputStream.readObject());
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }

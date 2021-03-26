@@ -4,9 +4,9 @@ import hust.cs.javacourse.search.index.AbstractDocument;
 import hust.cs.javacourse.search.index.AbstractIndex;
 import hust.cs.javacourse.search.index.AbstractPostingList;
 import hust.cs.javacourse.search.index.AbstractTerm;
-import java.io.File;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+
+import java.io.*;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -20,7 +20,8 @@ public class Index extends AbstractIndex {
      */
     @Override
     public String toString() {
-        return null;
+        return "ID-Path map: " + this.docIdToDocPathMapping.toString()
+                + ", Term-PostingList map: " + this.termToPostingListMapping.toString();
     }
 
     /**
@@ -30,7 +31,7 @@ public class Index extends AbstractIndex {
      */
     @Override
     public void addDocument(AbstractDocument document) {
-
+        this.docIdToDocPathMapping.put(document.getDocId(), document.getDocPath());
     }
 
     /**
@@ -41,7 +42,13 @@ public class Index extends AbstractIndex {
      */
     @Override
     public void load(File file) {
-
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            ObjectInputStream inputStream = new ObjectInputStream(fileInputStream);
+            readObject(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -52,7 +59,13 @@ public class Index extends AbstractIndex {
      */
     @Override
     public void save(File file) {
-
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
+            writeObject(outputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -63,7 +76,7 @@ public class Index extends AbstractIndex {
      */
     @Override
     public AbstractPostingList search(AbstractTerm term) {
-        return null;
+        return this.termToPostingListMapping.getOrDefault(term, null);
     }
 
     /**
@@ -73,7 +86,7 @@ public class Index extends AbstractIndex {
      */
     @Override
     public Set<AbstractTerm> getDictionary() {
-        return null;
+        return this.termToPostingListMapping.keySet();
     }
 
     /**
@@ -86,7 +99,12 @@ public class Index extends AbstractIndex {
      */
     @Override
     public void optimize() {
-
+        Set<AbstractTerm> keys = getDictionary();
+        for (var key:keys) {
+            AbstractPostingList postingList = search(key);
+            for (int i = 0; i < postingList.size(); ++i)
+                postingList.get(i).sort();
+        }
     }
 
     /**
@@ -97,7 +115,7 @@ public class Index extends AbstractIndex {
      */
     @Override
     public String getDocName(int docId) {
-        return null;
+        return this.docIdToDocPathMapping.get(docId);
     }
 
     /**
@@ -107,7 +125,12 @@ public class Index extends AbstractIndex {
      */
     @Override
     public void writeObject(ObjectOutputStream out) {
-
+        try {
+            out.writeObject(this.docIdToDocPathMapping);
+            out.writeObject(this.termToPostingListMapping);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -116,7 +139,13 @@ public class Index extends AbstractIndex {
      * @param in ：输入流对象
      */
     @Override
+    @SuppressWarnings("unchecked")
     public void readObject(ObjectInputStream in) {
-
+        try {
+            this.docIdToDocPathMapping = (Map<Integer, String>)in.readObject();
+            this.termToPostingListMapping = (Map<AbstractTerm, AbstractPostingList>)in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

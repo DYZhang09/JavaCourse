@@ -46,7 +46,7 @@ public class Term extends AbstractTerm {
     @Override
     public void writeObject(ObjectOutputStream out) {
         try {
-            out.writeObject(this);
+            out.writeObject(getContent());
         } catch (IOException i) {
             i.printStackTrace();
         }
@@ -55,7 +55,7 @@ public class Term extends AbstractTerm {
     @Override
     public void readObject(ObjectInputStream in) {
         try {
-            in.readObject();
+            setContent((String)in.readObject());
         } catch (ClassNotFoundException | IOException i) {
             i.printStackTrace();
         }
