@@ -17,7 +17,6 @@ public class IndexBuilder extends AbstractIndexBuilder{
     @Override
     public AbstractIndex buildIndex(String rootDirectory) {
         AbstractIndex index = new Index();
-        // TODO: parse files
         List<String> files = FileUtil.list(rootDirectory, ".txt");
         for (var file : files) {
             index.addDocument(this.docBuilder.build(this.docId++, file, new File(file)));

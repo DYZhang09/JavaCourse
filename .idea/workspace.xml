@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4213cc7e-886d-4d43-8cf7-3b6d0767e64d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/query/impl/Hit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/query/impl/IndexSearcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/query/impl/SimpleSorter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/DocumentBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/DocumentBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/Index.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/IndexBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/IndexBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/parse/impl/TermTupleScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/parse/impl/TermTupleScanner.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,13 +64,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IndexBuilder">
+  <component name="RunManager" selected="Application.IndexSearcher">
     <configuration name="IndexBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hust.cs.javacourse.search.index.impl.IndexBuilder" />
       <module name="SearchEngineForStudent" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hust.cs.javacourse.search.index.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndexSearcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hust.cs.javacourse.search.query.impl.IndexSearcher" />
+      <module name="SearchEngineForStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hust.cs.javacourse.search.query.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,19 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StopWordTermTupleFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hust.cs.javacourse.search.parse.impl.StopWordTermTupleFilter" />
-      <module name="SearchEngineForStudent" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hust.cs.javacourse.search.parse.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TermTupleScanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hust.cs.javacourse.search.parse.impl.TermTupleScanner" />
       <module name="SearchEngineForStudent" />
@@ -130,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IndexSearcher" />
         <item itemvalue="Application.IndexBuilder" />
         <item itemvalue="Application.TermTupleScanner" />
         <item itemvalue="Application.PatternTermTupleFilter" />
         <item itemvalue="Application.LengthTermTupleFilter" />
-        <item itemvalue="Application.StopWordTermTupleFilter" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +160,8 @@
       <workItem from="1616738148589" duration="5478000" />
       <workItem from="1616844117174" duration="57000" />
       <workItem from="1617149097713" duration="5882000" />
-      <workItem from="1617156818211" duration="7393000" />
+      <workItem from="1617156818211" duration="7638000" />
+      <workItem from="1617186151021" duration="10556000" />
     </task>
     <servers />
   </component>
@@ -177,5 +180,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hust/cs/javacourse/search/query/impl/IndexSearcher.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

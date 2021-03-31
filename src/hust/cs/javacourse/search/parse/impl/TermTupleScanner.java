@@ -44,7 +44,10 @@ public class TermTupleScanner extends AbstractTermTupleScanner{
                 splitter.setSplitRegex(Config.STRING_SPLITTER_REGEX);
                 List<String> words = splitter.splitByRegex(line);
                 for (var word : words)
-                    this.queue.add(new TermTuple(new Term(word), this.curPos++));
+                    if (Config.IGNORE_CASE)
+                        this.queue.add(new TermTuple(new Term(word.toLowerCase()), this.curPos++));
+                    else
+                        this.queue.add(new TermTuple(new Term(word), this.curPos++));
             }
             return this.queue.poll();
         }
