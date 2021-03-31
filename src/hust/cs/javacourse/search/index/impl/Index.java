@@ -1,13 +1,9 @@
 package hust.cs.javacourse.search.index.impl;
 
-import hust.cs.javacourse.search.index.AbstractDocument;
-import hust.cs.javacourse.search.index.AbstractIndex;
-import hust.cs.javacourse.search.index.AbstractPostingList;
-import hust.cs.javacourse.search.index.AbstractTerm;
+import hust.cs.javacourse.search.index.*;
 
 import java.io.*;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * AbstractIndex的具体实现类
@@ -21,7 +17,7 @@ public class Index extends AbstractIndex {
     @Override
     public String toString() {
         return "ID-Path map: " + this.docIdToDocPathMapping.toString()
-                + ", Term-PostingList map: " + this.termToPostingListMapping.toString();
+                + ",\n Term-PostingList map: " + this.termToPostingListMapping.toString();
     }
 
     /**
@@ -32,6 +28,26 @@ public class Index extends AbstractIndex {
     @Override
     public void addDocument(AbstractDocument document) {
         this.docIdToDocPathMapping.put(document.getDocId(), document.getDocPath());
+        List<AbstractTermTuple> tuples = document.getTuples();
+        for (var tuple : tuples) {
+            var postingList = this.termToPostingListMapping.getOrDefault(tuple.term, new PostingList());
+            if (postingList.size() == 0) {
+                postingList.add(new Posting(document.getDocId(), tuple.freq,
+                        new ArrayList<>(Arrays.asList(tuple.curPos))));
+                this.termToPostingListMapping.put(tuple.term, postingList);
+            } else {
+                int index = postingList.indexOf(document.getDocId());
+                if (index >= 0) {
+                    AbstractPosting posting = postingList.get(index);
+                    posting.getPositions().add(tuple.curPos);
+                    posting.setFreq(posting.getPositions().size());
+                } else
+                    postingList.add(new Posting(document.getDocId(), tuple.freq,
+                            new ArrayList<>(Arrays.asList(tuple.curPos))));
+            }
+        }
+
+        this.optimize();
     }
 
     /**
@@ -100,10 +116,11 @@ public class Index extends AbstractIndex {
     @Override
     public void optimize() {
         Set<AbstractTerm> keys = getDictionary();
-        for (var key:keys) {
+        for (var key : keys) {
             AbstractPostingList postingList = search(key);
             for (int i = 0; i < postingList.size(); ++i)
                 postingList.get(i).sort();
+            postingList.sort();
         }
     }
 
@@ -142,8 +159,8 @@ public class Index extends AbstractIndex {
     @SuppressWarnings("unchecked")
     public void readObject(ObjectInputStream in) {
         try {
-            this.docIdToDocPathMapping = (Map<Integer, String>)in.readObject();
-            this.termToPostingListMapping = (Map<AbstractTerm, AbstractPostingList>)in.readObject();
+            this.docIdToDocPathMapping = (Map<Integer, String>) in.readObject();
+            this.termToPostingListMapping = (Map<AbstractTerm, AbstractPostingList>) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
