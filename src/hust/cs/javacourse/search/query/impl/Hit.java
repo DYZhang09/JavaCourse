@@ -62,6 +62,6 @@ public class Hit extends AbstractHit {
 
     @Override
     public int compareTo(AbstractHit other) {
-        return Double.compare(this.score, other.getScore());
+        return (int)(this.score - other.getScore());
     }
 }
