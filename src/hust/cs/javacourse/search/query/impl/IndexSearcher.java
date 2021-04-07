@@ -13,7 +13,15 @@ import hust.cs.javacourse.search.util.Config;
 import java.io.File;
 import java.util.*;
 
+/**
+ * <pre>
+ *  IndexSearcher是检索具体实现的类，读取索引文件构建索引并根据给定的检索词进行检索
+ * </pre>
+ */
 public class IndexSearcher extends AbstractIndexSearcher {
+    /**
+     * 获得两个List的交，假设两个List是升序的
+     */
     private List<AbstractHit> getIntersectionOfHitsList(List<AbstractHit> hits1, List<AbstractHit> hits2) {
         List<AbstractHit> intersection = new ArrayList<>();
         Object[] array1 = hits1.toArray();
@@ -32,6 +40,9 @@ public class IndexSearcher extends AbstractIndexSearcher {
         return intersection;
     }
 
+    /**
+     * 获得两个List的并，假设两个List是升序的
+     */
     private List<AbstractHit> getUnionOfHitsList(List<AbstractHit> hits1, List<AbstractHit> hits2) {
         List<AbstractHit> union = new ArrayList<>();
         Object[] array1 = hits1.toArray();
@@ -56,11 +67,21 @@ public class IndexSearcher extends AbstractIndexSearcher {
         return union;
     }
 
+    /**
+     * 根据指定的索引文件加载索引, 在调用search方法前必须调用此方法
+     * @param indexFile ：指定索引文件
+     */
     @Override
     public void open(String indexFile) {
         this.index.load(new File(indexFile));
     }
 
+    /**
+     * 给定检索词，返回sorter排序后的AbstractHit子类对象数组表示搜索结果
+     * @param queryTerm ：检索词
+     * @param sorter ：排序器
+     * @return 已排序的AbstractHit子类对象数组
+     */
     @Override
     public AbstractHit[] search(AbstractTerm queryTerm, Sort sorter) {
         List<AbstractHit> hits = new ArrayList<>();
@@ -79,6 +100,14 @@ public class IndexSearcher extends AbstractIndexSearcher {
         return hits.toArray(res);
     }
 
+    /**
+     * 给定两个检索词以及逻辑组合方式，返回根据sorter排序器排序后的AbstractHit子类对象数组表示符合要求的检索结果
+     * @param queryTerm1 ：第1个检索词
+     * @param queryTerm2 ：第2个检索词
+     * @param sorter ：    排序器
+     * @param combine ：   多个检索词的逻辑组合方式
+     * @return 已排序的AbstractHit子类对象数组
+     */
     @Override
     public AbstractHit[] search(AbstractTerm queryTerm1, AbstractTerm queryTerm2, Sort sorter, LogicalCombination combine) {
         List<AbstractHit> hits1 = Arrays.asList(this.search(queryTerm1, null));

@@ -15,18 +15,35 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * <pre>
+ *     TermTupleScanner继承于AbstractTermTupleScanner抽象父类，是一个AbstractTermTupleStream流对象，
+ *     它利用java.io.BufferedReader去读取文本文件得到一个个三元组TermTuple.
+ * </pre>
+ */
 public class TermTupleScanner extends AbstractTermTupleScanner{
     private int curPos = 0;
     private Queue<TermTuple> queue = new LinkedList<>();
 
+    /**
+     * 默认构造函数
+     */
     public TermTupleScanner() {
 
     }
 
+    /**
+     * 构造函数
+     * @param bufferedReader 输入流，bufferedReader对象
+     */
     public TermTupleScanner(BufferedReader bufferedReader) {
         super(bufferedReader);
     }
 
+    /**
+     * 返回下一个三元组
+     * @return 三元组
+     */
     public AbstractTermTuple next() {
         if (this.input != null) {
             if (this.queue.isEmpty()) {

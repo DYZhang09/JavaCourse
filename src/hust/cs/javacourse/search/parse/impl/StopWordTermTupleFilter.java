@@ -14,11 +14,25 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
+/**
+ * <pre>
+ *     StopWordTermTupleFilter继承于AbstractTermTupleFilter抽象父类，读取一个AbstractTermTupleStream流对象，
+ *     根据停用词表过滤，保留不在停用词表中的Term，停用词表由util包的StopWords.STOP_WORDS指定
+ * </pre>
+ */
 public class StopWordTermTupleFilter extends AbstractTermTupleFilter{
+    /**
+     * 构造函数
+     * @param input 输入流，AbstractTermTupleStream子类对象
+     */
     public StopWordTermTupleFilter(AbstractTermTupleStream input) {
         super(input);
     }
 
+    /**
+     * 返回下一个经过过滤后的三元组
+     * @return 三元组
+     */
     public AbstractTermTuple next() {
         if (this.input == null) return null;
         AbstractTermTuple termTuple = new TermTuple();
@@ -29,7 +43,7 @@ public class StopWordTermTupleFilter extends AbstractTermTupleFilter{
         return termTuple;
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         try {
             File file = new File(Config.DOC_DIR + "stop.txt");
             TermTupleScanner scanner = new TermTupleScanner(new BufferedReader(new FileReader(file)));

@@ -9,11 +9,27 @@ import hust.cs.javacourse.search.util.FileUtil;
 import java.io.File;
 import java.util.List;
 
-public class IndexBuilder extends AbstractIndexBuilder{
+/**
+ * <pre>
+ * IndexBuilder是索引构造器的类, 完成索引构造的工作
+ * </pre>
+ */
+public class IndexBuilder extends AbstractIndexBuilder {
+    /**
+     * 构造函数
+     *
+     * @param documentBuilder AbstractDocumentBuilder子类的对象
+     */
     public IndexBuilder(AbstractDocumentBuilder documentBuilder) {
         super(documentBuilder);
     }
 
+    /**
+     * 为指定目录下的所有文本文件建立倒排索引
+     *
+     * @param rootDirectory ：指定目录
+     * @return 建立完毕的倒排索引
+     */
     @Override
     public AbstractIndex buildIndex(String rootDirectory) {
         AbstractIndex index = new Index();
@@ -25,6 +41,11 @@ public class IndexBuilder extends AbstractIndexBuilder{
         return index;
     }
 
+    /**
+     * 简单测试
+     *
+     * @param args 命令行参数
+     */
     public static void main(String[] args) {
         IndexBuilder builder = new IndexBuilder(new DocumentBuilder());
         AbstractIndex index = builder.buildIndex(Config.DOC_DIR);
