@@ -3,7 +3,6 @@ package hust.cs.javacourse.search.parse.impl;
 import hust.cs.javacourse.search.index.AbstractTermTuple;
 import hust.cs.javacourse.search.index.impl.TermTuple;
 import hust.cs.javacourse.search.parse.AbstractTermTupleStream;
-import hust.cs.javacourse.search.parse.AbstractTermTupleScanner;
 import hust.cs.javacourse.search.parse.AbstractTermTupleFilter;
 import hust.cs.javacourse.search.util.Config;
 import hust.cs.javacourse.search.util.StopWords;
@@ -20,9 +19,10 @@ import java.util.Arrays;
  *     根据停用词表过滤，保留不在停用词表中的Term，停用词表由util包的StopWords.STOP_WORDS指定
  * </pre>
  */
-public class StopWordTermTupleFilter extends AbstractTermTupleFilter{
+public class StopWordTermTupleFilter extends AbstractTermTupleFilter {
     /**
      * 构造函数
+     *
      * @param input 输入流，AbstractTermTupleStream子类对象
      */
     public StopWordTermTupleFilter(AbstractTermTupleStream input) {
@@ -31,6 +31,7 @@ public class StopWordTermTupleFilter extends AbstractTermTupleFilter{
 
     /**
      * 返回下一个经过过滤后的三元组
+     *
      * @return 三元组
      */
     public AbstractTermTuple next() {
@@ -41,20 +42,5 @@ public class StopWordTermTupleFilter extends AbstractTermTupleFilter{
             if (termTuple == null) return null;
         } while (Arrays.binarySearch(StopWords.STOP_WORDS, termTuple.term.getContent()) >= 0);
         return termTuple;
-    }
-
-    public static void main(String[] args) {
-        try {
-            File file = new File(Config.DOC_DIR + "stop.txt");
-            TermTupleScanner scanner = new TermTupleScanner(new BufferedReader(new FileReader(file)));
-            StopWordTermTupleFilter filter = new StopWordTermTupleFilter(scanner);
-            while (true) {
-                AbstractTermTuple tuple = filter.next();
-                if (tuple == null) return;
-                System.out.println(tuple.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

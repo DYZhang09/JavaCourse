@@ -12,9 +12,10 @@ import java.util.List;
  *     根据Term的出现频率之和打分
  * </pre>
  */
-public class SimpleSorter implements Sort{
+public class SimpleSorter implements Sort {
     /**
      * 对命中结果根据score进行排序
+     *
      * @param hits ：命中结果集合
      */
     @Override
@@ -28,6 +29,7 @@ public class SimpleSorter implements Sort{
 
     /**
      * 给命中文档打分，根据其Term-Posting map里面Term出现词频的总数打分
+     *
      * @param hit ：命中文档
      * @return score
      */

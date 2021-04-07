@@ -1,6 +1,5 @@
 package hust.cs.javacourse.search.query.impl;
 
-import hust.cs.javacourse.search.index.AbstractIndex;
 import hust.cs.javacourse.search.index.AbstractPosting;
 import hust.cs.javacourse.search.index.AbstractPostingList;
 import hust.cs.javacourse.search.index.AbstractTerm;
@@ -33,9 +32,9 @@ public class IndexSearcher extends AbstractIndexSearcher {
             if (hit1.getDocId() == hit2.getDocId()) {
                 hit1.getTermPostingMapping().putAll(hit2.getTermPostingMapping());
                 intersection.add(hit1);
-                i1++; i2++;
-            }
-            else if (hit1.getDocId() < hit2.getDocId()) i1++;
+                i1++;
+                i2++;
+            } else if (hit1.getDocId() < hit2.getDocId()) i1++;
             else i2++;
         }
         return intersection;
@@ -55,22 +54,24 @@ public class IndexSearcher extends AbstractIndexSearcher {
             if (hit1.getDocId() == hit2.getDocId()) {
                 hit1.getTermPostingMapping().putAll(hit2.getTermPostingMapping());
                 union.add(hit1);
-                i1++; i2++;
-            }
-            else if (hit1.getDocId() < hit2.getDocId()) {
-                i1++; union.add(hit1);
-            }
-            else {
-                i2++; union.add(hit2);
+                i1++;
+                i2++;
+            } else if (hit1.getDocId() < hit2.getDocId()) {
+                i1++;
+                union.add(hit1);
+            } else {
+                i2++;
+                union.add(hit2);
             }
         }
-        while (i1 < array1.length) union.add((AbstractHit)array1[i1++]);
-        while (i2 <array2.length) union.add((AbstractHit)array2[i2++]);
+        while (i1 < array1.length) union.add((AbstractHit) array1[i1++]);
+        while (i2 < array2.length) union.add((AbstractHit) array2[i2++]);
         return union;
     }
 
     /**
      * 根据指定的索引文件加载索引, 在调用search方法前必须调用此方法
+     *
      * @param indexFile ：指定索引文件
      */
     @Override
@@ -80,8 +81,9 @@ public class IndexSearcher extends AbstractIndexSearcher {
 
     /**
      * 给定检索词，返回sorter排序后的AbstractHit子类对象数组表示搜索结果
+     *
      * @param queryTerm ：检索词
-     * @param sorter ：排序器
+     * @param sorter    ：排序器
      * @return 已排序的AbstractHit子类对象数组
      */
     @Override
@@ -104,10 +106,11 @@ public class IndexSearcher extends AbstractIndexSearcher {
 
     /**
      * 给定两个检索词以及逻辑组合方式，返回根据sorter排序器排序后的AbstractHit子类对象数组表示符合要求的检索结果
+     *
      * @param queryTerm1 ：第1个检索词
      * @param queryTerm2 ：第2个检索词
-     * @param sorter ：    排序器
-     * @param combine ：   多个检索词的逻辑组合方式
+     * @param sorter     ：    排序器
+     * @param combine    ：   多个检索词的逻辑组合方式
      * @return 已排序的AbstractHit子类对象数组
      */
     @Override
@@ -123,14 +126,5 @@ public class IndexSearcher extends AbstractIndexSearcher {
             sorter.sort(res);
         AbstractHit[] array = new AbstractHit[res.size()];
         return res.toArray(array);
-    }
-
-    public static void main(String[] args) {
-        IndexSearcher searcher = new IndexSearcher();
-        searcher.open(Config.INDEX_DIR + "index.idx");
-        AbstractHit[] hits = searcher.search(new Term("death"), new Term("rate"),
-                new SimpleSorter(), LogicalCombination.AND);
-        for (var hit : hits)
-            System.out.println(hit);
     }
 }

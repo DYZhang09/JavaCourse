@@ -182,6 +182,7 @@ public class PostingList extends AbstractPostingList {
      * @param inputStream 输入流
      */
     @Override
+    @SuppressWarnings("unchecked")
     public void readObject(ObjectInputStream inputStream) {
         try {
             this.list = (List<AbstractPosting>) inputStream.readObject();

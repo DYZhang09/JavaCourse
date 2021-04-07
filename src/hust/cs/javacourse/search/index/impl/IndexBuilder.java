@@ -40,19 +40,4 @@ public class IndexBuilder extends AbstractIndexBuilder {
         index.save(new File(Config.INDEX_DIR + "index.idx"));
         return index;
     }
-
-    /**
-     * 简单测试
-     *
-     * @param args 命令行参数
-     */
-    public static void main(String[] args) {
-        IndexBuilder builder = new IndexBuilder(new DocumentBuilder());
-        AbstractIndex index = builder.buildIndex(Config.DOC_DIR);
-        System.out.println(index);
-
-        AbstractIndex index1 = new Index();
-        index1.load(new File(Config.INDEX_DIR + "index.idx"));
-        System.out.println(index1);
-    }
 }

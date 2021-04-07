@@ -6,13 +6,13 @@ import hust.cs.javacourse.search.index.AbstractTermTuple;
 import java.util.List;
 
 /**
- *<pre>
+ * <pre>
  *     Document是文档对象的类，继承于AbstractDocument抽象父类.
  *          文档对象是解析一个文本文件得到结果，文档对象里面包含：
  *              文档id.
  *              文档的绝对路径.
  *              文档包含的三元组对象列表，一个三元组对象是抽象类AbstractTermTuple的子类实例
- *</pre>
+ * </pre>
  */
 public class Document extends AbstractDocument {
     /**
@@ -28,8 +28,7 @@ public class Document extends AbstractDocument {
      * @param docPath 文档对应的地址
      */
     public Document(int docId, String docPath) {
-        this.docId = docId;
-        this.docPath = docPath;
+        super(docId, docPath);
     }
 
     /**
@@ -40,9 +39,7 @@ public class Document extends AbstractDocument {
      * @param tuples  文档所包含的三元组的链表
      */
     public Document(int docId, String docPath, List<AbstractTermTuple> tuples) {
-        this.docId = docId;
-        this.docPath = docPath;
-        this.tuples = tuples;
+        super(docId, docPath, tuples);
     }
 
     /**

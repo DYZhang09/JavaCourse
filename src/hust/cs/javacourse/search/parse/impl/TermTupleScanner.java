@@ -21,7 +21,7 @@ import java.util.Queue;
  *     它利用java.io.BufferedReader去读取文本文件得到一个个三元组TermTuple.
  * </pre>
  */
-public class TermTupleScanner extends AbstractTermTupleScanner{
+public class TermTupleScanner extends AbstractTermTupleScanner {
     private int curPos = 0;
     private Queue<TermTuple> queue = new LinkedList<>();
 
@@ -34,6 +34,7 @@ public class TermTupleScanner extends AbstractTermTupleScanner{
 
     /**
      * 构造函数
+     *
      * @param bufferedReader 输入流，bufferedReader对象
      */
     public TermTupleScanner(BufferedReader bufferedReader) {
@@ -42,6 +43,7 @@ public class TermTupleScanner extends AbstractTermTupleScanner{
 
     /**
      * 返回下一个三元组
+     *
      * @return 三元组
      */
     public AbstractTermTuple next() {
@@ -69,19 +71,5 @@ public class TermTupleScanner extends AbstractTermTupleScanner{
             return this.queue.poll();
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        File file = new File(Config.DOC_DIR + "stop.txt");
-        try {
-            TermTupleScanner scanner = new TermTupleScanner(new BufferedReader(new FileReader(file)));
-            while (true) {
-                AbstractTermTuple termTuple = scanner.next();
-                if (termTuple == null) return;
-                System.out.println(termTuple.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

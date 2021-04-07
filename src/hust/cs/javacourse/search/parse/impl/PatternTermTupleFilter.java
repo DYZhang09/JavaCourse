@@ -6,10 +6,6 @@ import hust.cs.javacourse.search.parse.AbstractTermTupleFilter;
 import hust.cs.javacourse.search.parse.AbstractTermTupleStream;
 import hust.cs.javacourse.search.util.Config;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.regex.Pattern;
 
 /**
@@ -21,6 +17,7 @@ import java.util.regex.Pattern;
 public class PatternTermTupleFilter extends AbstractTermTupleFilter {
     /**
      * 构造函数
+     *
      * @param input 输入流, AbstractTermTupleStream子类对象
      */
     public PatternTermTupleFilter(AbstractTermTupleStream input) {
@@ -29,6 +26,7 @@ public class PatternTermTupleFilter extends AbstractTermTupleFilter {
 
     /**
      * 返回下一个经过过滤后的三元组
+     *
      * @return 三元组
      */
     public AbstractTermTuple next() {
@@ -39,20 +37,5 @@ public class PatternTermTupleFilter extends AbstractTermTupleFilter {
             if (tuple == null) return null;
         } while (!Pattern.matches(Config.TERM_FILTER_PATTERN, tuple.term.getContent()));
         return tuple;
-    }
-
-    public static void main(String[] args) {
-        try {
-            File file = new File(Config.DOC_DIR + "stop.txt");
-            TermTupleScanner scanner = new TermTupleScanner(new BufferedReader(new FileReader(file)));
-            PatternTermTupleFilter filter = new PatternTermTupleFilter(scanner);
-            while (true) {
-                AbstractTermTuple tuple = filter.next();
-                if (tuple == null) return;
-                System.out.println(tuple);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
