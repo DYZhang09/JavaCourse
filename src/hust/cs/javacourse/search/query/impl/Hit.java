@@ -21,7 +21,8 @@ public class Hit extends AbstractHit {
 
     /**
      * 构造函数
-     * @param docId 文档id
+     *
+     * @param docId   文档id
      * @param docPath 文档路径
      */
     public Hit(int docId, String docPath) {
@@ -30,8 +31,9 @@ public class Hit extends AbstractHit {
 
     /**
      * 构造函数
-     * @param docId 文档id
-     * @param docPath 文档路径
+     *
+     * @param docId      文档id
+     * @param docPath    文档路径
      * @param postingMap Term-Posting的map映射
      */
     public Hit(int docId, String docPath, Map<AbstractTerm, AbstractPosting> postingMap) {
@@ -40,6 +42,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 获得文档id
+     *
      * @return 文档id
      */
     @Override
@@ -49,6 +52,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 获得文档路径
+     *
      * @return 文档路径
      */
     @Override
@@ -58,6 +62,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 获得文档内容
+     *
      * @return 文档内容
      */
     @Override
@@ -67,6 +72,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 获得Hit的得分
+     *
      * @return 得分
      */
     @Override
@@ -76,6 +82,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 获得Term-Posting的map映射
+     *
      * @return Term-Posting的map映射
      */
     @Override
@@ -85,6 +92,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 设置内容
+     *
      * @param content ：文档内容
      */
     @Override
@@ -94,6 +102,7 @@ public class Hit extends AbstractHit {
 
     /**
      * 设置得分
+     *
      * @param score ：文档得分
      */
     @Override
@@ -103,21 +112,24 @@ public class Hit extends AbstractHit {
 
     /**
      * 返回字符串表示
+     *
      * @return 字符串表示
      */
     @Override
     public String toString() {
         return "DocID: " + this.docId + ", Score: " + this.score +
+                "\nPosting Map: " + this.termPostingMapping.toString() +
                 "\nDocPath: " + this.docPath + "\nContent: \n" + this.content + "\n";
     }
 
     /**
      * 比较与另一个AbstractHit子类对象的大小，根据得分比较
+     *
      * @param other 待比较的对象
      * @return 本对象的score与待比较对象score的差值
      */
     @Override
     public int compareTo(AbstractHit other) {
-        return (int)(this.score - other.getScore());
+        return (int) (this.score - other.getScore());
     }
 }

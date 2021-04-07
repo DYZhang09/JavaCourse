@@ -5,16 +5,10 @@
   <nodes />
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="559.5" y="335.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="753.5" y="462.5" />
   <SelectedNodes />
-  <Categories>
-    <Category>Fields</Category>
-    <Category>Constructors</Category>
-    <Category>Methods</Category>
-    <Category>Properties</Category>
-    <Category>Inner Classes</Category>
-  </Categories>
-  <SCOPE>Project Files</SCOPE>
+  <Categories />
+  <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>
 

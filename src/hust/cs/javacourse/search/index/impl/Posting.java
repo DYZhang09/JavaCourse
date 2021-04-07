@@ -2,9 +2,8 @@ package hust.cs.javacourse.search.index.impl;
 
 import hust.cs.javacourse.search.index.AbstractPosting;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -113,7 +112,8 @@ public class Posting extends AbstractPosting {
 
         Posting other = (Posting) object;
         return this.docId == other.docId && this.freq == other.freq
-                && this.positions.equals(other.positions);
+                && this.positions.size() == other.positions.size()
+                && this.positions.containsAll(other.positions);
     }
 
     /**
@@ -173,10 +173,26 @@ public class Posting extends AbstractPosting {
     @SuppressWarnings("unchecked")
     public void readObject(ObjectInputStream inputStream) {
         try {
-            setDocId(inputStream.readInt());
-            setFreq(inputStream.readInt());
+            setDocId((int)inputStream.readObject());
+            setFreq((int)inputStream.readObject());
             setPositions((List<Integer>) inputStream.readObject());
         } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        Posting p = new Posting(1, 4, Arrays.asList(1, 10, 100, 400));
+        try {
+            String filePath = "H:/Experiment1Test/test/config/..//ser/Posting.dat";
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath));
+            p.writeObject(out);
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath));
+            AbstractPosting posting = new Posting();
+            posting.readObject(in);
+            System.out.println(p);
+            System.out.println(posting);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

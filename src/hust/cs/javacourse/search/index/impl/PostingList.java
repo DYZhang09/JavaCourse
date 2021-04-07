@@ -30,7 +30,9 @@ public class PostingList extends AbstractPostingList {
      */
     @Override
     public void add(AbstractPosting posting) {
-        this.list.add(posting);
+        if (posting == null) return;
+        if (!this.list.contains(posting))
+            this.list.add(posting);
     }
 
     /**
@@ -50,7 +52,8 @@ public class PostingList extends AbstractPostingList {
      */
     @Override
     public void add(List<AbstractPosting> postings) {
-        this.list.addAll(postings);
+        for (var posting : postings)
+            this.add(posting);
     }
 
     /**

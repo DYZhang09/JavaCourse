@@ -31,6 +31,7 @@ public class IndexSearcher extends AbstractIndexSearcher {
             AbstractHit hit1 = (AbstractHit) array1[i1];
             AbstractHit hit2 = (AbstractHit) array2[i2];
             if (hit1.getDocId() == hit2.getDocId()) {
+                hit1.getTermPostingMapping().putAll(hit2.getTermPostingMapping());
                 intersection.add(hit1);
                 i1++; i2++;
             }
@@ -52,6 +53,7 @@ public class IndexSearcher extends AbstractIndexSearcher {
             AbstractHit hit1 = (AbstractHit) array1[i1];
             AbstractHit hit2 = (AbstractHit) array2[i2];
             if (hit1.getDocId() == hit2.getDocId()) {
+                hit1.getTermPostingMapping().putAll(hit2.getTermPostingMapping());
                 union.add(hit1);
                 i1++; i2++;
             }
@@ -126,8 +128,8 @@ public class IndexSearcher extends AbstractIndexSearcher {
     public static void main(String[] args) {
         IndexSearcher searcher = new IndexSearcher();
         searcher.open(Config.INDEX_DIR + "index.idx");
-        AbstractHit[] hits = searcher.search(new Term("bbb"), new Term("aaa"),
-                new SimpleSorter(), LogicalCombination.ADN);
+        AbstractHit[] hits = searcher.search(new Term("death"), new Term("rate"),
+                new SimpleSorter(), LogicalCombination.AND);
         for (var hit : hits)
             System.out.println(hit);
     }
