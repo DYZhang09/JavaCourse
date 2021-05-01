@@ -62,11 +62,17 @@ SearchEngineForStudent
 
 ```
 ## Usage
-1. 建立倒排索引：首先将文本文件放于./text下，然后运行
-```$xslt
->java -calsspath ./bin/production/SearchEngineForStudent hust.cs.javacourse.search.run.TestBuildIndex
+1. 克隆仓库
+```aidl
+git clone https://github.com/Monster2333333/JavaCourse.git
+cd ./JavaCourse
 ```
-2. 搜索
+
+2. 建立倒排索引：首先将文本文件放于./text下，然后运行
+```$xslt
+>java -classpath ./bin/production/SearchEngineForStudent hust.cs.javacourse.search.run.TestBuildIndex
+```
+3. 搜索
 ```$xslt
 >java -classpath ./bin/production/SearchEngineForStudent hust.cs.javacourse.search.run.TestSearchIndex <Word1> [<Word2> <LogicalComb>]
 ```
