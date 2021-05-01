@@ -37,7 +37,7 @@ public class IndexBuilder extends AbstractIndexBuilder {
         for (var file : files) {
             index.addDocument(this.docBuilder.build(this.docId++, file, new File(file)));
         }
-        index.save(new File(Config.INDEX_DIR + "index.idx"));
+        index.save(new File(Config.INDEX_DIR + "index.dat"));
         return index;
     }
 }

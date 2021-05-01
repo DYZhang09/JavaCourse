@@ -24,13 +24,15 @@ import java.util.Arrays;
  */
 public class TestSearchIndex {
     /**
-     *  搜索程序入口
+     * 搜索程序入口
+     *
      * @param args ：命令行参数
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         AbstractIndexSearcher searcher = new IndexSearcher();
         searcher.open(Config.INDEX_DIR + "index.dat");
-        AbstractHit[] hits = searcher.search(new Term("coronavirus"), new SimpleSorter());
+        AbstractHit[] hits = searcher.search(new Term("google"), new Term("benefits"),
+                new SimpleSorter(), IndexSearcher.LogicalCombination.OR);
         for (var hit : hits) {
             System.out.print(hit);
             System.out.println();

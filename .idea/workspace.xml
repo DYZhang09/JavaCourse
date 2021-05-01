@@ -42,101 +42,13 @@
       <change beforePath="$PROJECT_DIR$/bin/production/SearchEngineForStudent/hust/cs/javacourse/search/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/SearchEngineForStudent/hust/cs/javacourse/search/util/FileUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/production/SearchEngineForStudent/hust/cs/javacourse/search/util/StopWords.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/SearchEngineForStudent/hust/cs/javacourse/search/util/StopWords.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/production/SearchEngineForStudent/hust/cs/javacourse/search/util/StringSplitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/SearchEngineForStudent/hust/cs/javacourse/search/util/StringSplitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractDocument.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractDocument.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractDocumentBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractDocumentBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractIndexBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractIndexBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractPosting.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractPosting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractPostingList.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractPostingList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractTerm.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractTerm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractTermTuple.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/AbstractTermTuple.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/FileSerializable.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/FileSerializable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractDocument.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractDocument.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractDocumentBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractDocumentBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractIndexBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractIndexBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractPosting.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractPosting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractPostingList.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractPostingList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractTerm.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractTerm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractTermTuple.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/AbstractTermTuple.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/FileSerializable.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/class-use/FileSerializable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/class-use/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/class-use/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/impl/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/index/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/AbstractTermTupleFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/AbstractTermTupleFilter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/AbstractTermTupleScanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/AbstractTermTupleScanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/AbstractTermTupleStream.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/AbstractTermTupleStream.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/class-use/AbstractTermTupleFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/class-use/AbstractTermTupleFilter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/class-use/AbstractTermTupleScanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/class-use/AbstractTermTupleScanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/class-use/AbstractTermTupleStream.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/class-use/AbstractTermTupleStream.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/parse/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/AbstractHit.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/AbstractHit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/AbstractIndexSearcher.LogicalCombination.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/AbstractIndexSearcher.LogicalCombination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/AbstractIndexSearcher.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/AbstractIndexSearcher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/Sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/Sort.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/AbstractHit.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/AbstractHit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/AbstractIndexSearcher.LogicalCombination.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/AbstractIndexSearcher.LogicalCombination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/AbstractIndexSearcher.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/AbstractIndexSearcher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/Sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/class-use/Sort.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/query/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/TestBuildIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/TestBuildIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/TestSearchIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/TestSearchIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/class-use/TestBuildIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/class-use/TestBuildIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/class-use/TestSearchIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/class-use/TestSearchIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/run/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/Config.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/Config.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/FileUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/FileUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/StopWords.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/StopWords.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/StringSplitter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/StringSplitter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/Config.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/Config.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/FileUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/FileUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/StopWords.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/StopWords.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/StringSplitter.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/class-use/StringSplitter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/hust/cs/javacourse/search/util/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-19.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/parse/AbstractTermTupleStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/parse/AbstractTermTupleStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/parse/impl/LengthTermTupleFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/parse/impl/LengthTermTupleFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/index.dat" beforeDir="false" afterPath="$PROJECT_DIR$/index/index.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/index.idx" beforeDir="false" afterPath="$PROJECT_DIR$/index/index.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/IndexBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/index/impl/IndexBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hust/cs/javacourse/search/run/TestSearchIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/cs/javacourse/search/run/TestSearchIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text/3.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IndexSearcher">
+  <component name="RunManager" selected="Application.TestSearchIndex">
     <configuration name="IndexBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hust.cs.javacourse.search.index.impl.IndexBuilder" />
       <module name="SearchEngineForStudent" />
@@ -261,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestSearchIndex" />
+        <item itemvalue="Application.TestBuildIndex" />
         <item itemvalue="Application.IndexSearcher" />
         <item itemvalue="Application.IndexBuilder" />
         <item itemvalue="Application.Posting" />
-        <item itemvalue="Application.TestSearchIndex" />
-        <item itemvalue="Application.TestBuildIndex" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +210,13 @@
       <workItem from="1617428717350" duration="57000" />
       <workItem from="1617754203594" duration="4423000" />
       <workItem from="1617791642541" duration="294000" />
-      <workItem from="1617792502191" duration="6774000" />
+      <workItem from="1617792502191" duration="9103000" />
+      <workItem from="1618219944778" duration="61000" />
+      <workItem from="1618397493565" duration="93000" />
+      <workItem from="1618406193858" duration="66000" />
+      <workItem from="1619001378515" duration="9729000" />
+      <workItem from="1619426764638" duration="80000" />
+      <workItem from="1619854415286" duration="7246000" />
     </task>
     <servers />
   </component>
